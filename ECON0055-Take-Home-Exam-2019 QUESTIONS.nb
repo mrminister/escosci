@@ -1,0 +1,750 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     30383,        742]
+NotebookOptionsPosition[     26193,        673]
+NotebookOutlinePosition[     26612,        689]
+CellTagsIndexPosition[     26569,        686]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Take-Home Exam", "Title",
+ CellChangeTimes->{{3.7471602460723124`*^9, 3.7471602465223722`*^9}, {
+   3.747160723801004*^9, 3.7471607253871164`*^9}, 3.7471636774453354`*^9, {
+   3.748246492197727*^9, 
+   3.7482465073765273`*^9}},ExpressionUUID->"286ca117-9ff3-45ca-aeaf-\
+fa39a5d8fb12"],
+
+Cell["Fall term 2018-2019", "Subtitle",
+ CellChangeTimes->{{3.7471602563918095`*^9, 3.747160257432206*^9}, {
+  3.747160728617397*^9, 3.747160733487173*^9}, {3.747163686505107*^9, 
+  3.7471636897750688`*^9}, {3.748246510808527*^9, 3.748246514053327*^9}, {
+  3.75347662766733*^9, 
+  3.75347662766733*^9}},ExpressionUUID->"1a369539-eed4-4a67-9b68-\
+d9f94214f390"],
+
+Cell["Submission deadline: January 14th 2019 at 13h00 GMT", "Author",
+ CellChangeTimes->{{3.753476629237221*^9, 3.7534766383318267`*^9}, {
+  3.753476693254347*^9, 
+  3.753476698441328*^9}},ExpressionUUID->"0a14a6ba-4a36-470e-8913-\
+79547ee28377"],
+
+Cell["Candidate number: ... ... ... ... ... ... ...", "Author",
+ CellChangeTimes->{{3.7471602801242914`*^9, 3.7471602822821198`*^9}, {
+  3.7528204445659585`*^9, 
+  3.752820450466675*^9}},ExpressionUUID->"38e7bdfe-e0b0-4da1-b106-\
+6b874f09f4c1"],
+
+Cell[CellGroupData[{
+
+Cell["Instruction", "AbstractSection",
+ CellChangeTimes->{{3.747160343441991*^9, 3.7471603446018515`*^9}, {
+  3.748246520355727*^9, 
+  3.748246521697327*^9}},ExpressionUUID->"74117d6f-d342-4ce9-b8c8-\
+2ebfc5d9322c"],
+
+Cell[TextData[{
+ "Each of the problems ",
+ StyleBox["a",
+  FontWeight->"Bold"],
+ " through ",
+ StyleBox["f",
+  FontWeight->"Bold"],
+ " below has equal weight and each contributes 16 marks, 96 in total. \
+Sub-questions inside questions ",
+ StyleBox["a-f",
+  FontWeight->"Bold"],
+ " have equal weight. "
+}], "Abstract",
+ CellChangeTimes->{{3.747160357531851*^9, 3.7471603674320602`*^9}, {
+  3.7471607739371643`*^9, 3.7471608154685287`*^9}, {3.7471636986999836`*^9, 
+  3.747163701297089*^9}, {3.7482465266893272`*^9, 3.7482465723973274`*^9}, {
+  3.7482474770429416`*^9, 3.7482474847183385`*^9}, {3.7528199918706045`*^9, 
+  3.752820010361492*^9}, {3.752820041808087*^9, 3.7528201168091393`*^9}, {
+  3.7528201565156574`*^9, 3.7528201828338695`*^9}, {3.7528202447903447`*^9, 
+  3.752820257969616*^9}, {3.7534746239236836`*^9, 3.753474643068257*^9}, {
+  3.7534746819478536`*^9, 3.753474695006058*^9}, {3.7534762297914715`*^9, 
+  3.7534762358012857`*^9}, {3.753476329911063*^9, 3.7534763385008*^9}, {
+  3.753476439082363*^9, 
+  3.753476471649669*^9}},ExpressionUUID->"b87d91f7-4c41-4890-a43e-\
+091aa9f7f21a"],
+
+Cell[TextData[{
+ "The remaining 4 marks out of 100 are awarded as rounding-off' mark based \
+upon the overall quality of the submission as follows: ",
+ StyleBox["0:sufficient, 1: good, 2: very good, 3: excellent and 4: \
+outstanding",
+  FontSlant->"Italic"],
+ "."
+}], "Abstract",
+ CellChangeTimes->{{3.747160357531851*^9, 3.7471603674320602`*^9}, {
+   3.7471607739371643`*^9, 3.7471608154685287`*^9}, {3.7471636986999836`*^9, 
+   3.747163701297089*^9}, {3.7482465266893272`*^9, 3.7482465723973274`*^9}, {
+   3.7482474770429416`*^9, 3.7482474847183385`*^9}, {3.7528199918706045`*^9, 
+   3.752820010361492*^9}, {3.752820041808087*^9, 3.752820144109187*^9}, 
+   3.752837595772027*^9, {3.7534764902612257`*^9, 3.75347653756608*^9}, {
+   3.75347671623775*^9, 
+   3.75347671623775*^9}},ExpressionUUID->"5d837c7f-2172-479a-a608-\
+999dc41a9f27"],
+
+Cell["Submit as a pdf-file!", "Abstract",
+ CellChangeTimes->{{3.747160357531851*^9, 3.7471603674320602`*^9}, {
+   3.7471607739371643`*^9, 3.7471608154685287`*^9}, {3.7471636986999836`*^9, 
+   3.747163701297089*^9}, {3.7482465266893272`*^9, 3.7482465723973274`*^9}, {
+   3.7482474770429416`*^9, 3.7482474847183385`*^9}, {3.7528199918706045`*^9, 
+   3.752820010361492*^9}, {3.752820041808087*^9, 3.752820144109187*^9}, 
+   3.752837595772027*^9, {3.7534764902612257`*^9, 3.75347653756608*^9}, {
+   3.7534767168070507`*^9, 
+   3.7534767207280426`*^9}},ExpressionUUID->"5de8ad3d-8d8f-4ed2-9c01-\
+d6aeb3293161"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Exam Questions", "Section",
+ CellChangeTimes->{{3.747160378551937*^9, 3.7471603902852173`*^9}, {
+  3.748246723178527*^9, 3.748246748233127*^9}, {3.75282046183988*^9, 
+  3.7528204639321866`*^9}},ExpressionUUID->"e490e541-ceaf-42f8-9837-\
+76d3e3435b38"],
+
+Cell[CellGroupData[{
+
+Cell["a: A Knowledge network", "Subsection",
+ CellChangeTimes->{{3.748247451503086*^9, 3.7482474520178995`*^9}, {
+  3.7528355573518376`*^9, 
+  3.7528355602013574`*^9}},ExpressionUUID->"e0e7cb38-0fd3-4c9c-8edc-\
+fb639c7ad218"],
+
+Cell[TextData[{
+ "In the course we looked at how knowledge can be viewed as a collection of \
+knowledge components, in the most primitive case these were \
+\[OpenCurlyDoubleQuote]data\[CloseCurlyDoubleQuote], connected by link \
+representing informational connections between the nodes. Suppose we have a \
+knowledge network with ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],ExpressionUUID->
+  "173df8e4-5b1b-4b9b-8511-7319291c3d00"],
+ " where every node has a probability of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"1", "/", "m"}], TraditionalForm]],ExpressionUUID->
+  "866afb09-f097-4e5a-91c1-db1ad8a60cc3"],
+ " to be connected by an outgoing link to any of the other nodes, and for \
+these links to have a weight which is randomly drawn from a probability \
+distribution of your choice which leaves the probability of the weight being \
+negative less than 5%. There should be no self-loops!"
+}], "Text",
+ CellChangeTimes->{{3.7482477102982593`*^9, 3.7482477777691245`*^9}, 
+   3.748248051980051*^9, {3.7528209990384245`*^9, 3.7528210432087717`*^9}, {
+   3.7529215018636885`*^9, 3.752921564396706*^9}, {3.7529216282277703`*^9, 
+   3.752921636581574*^9}, {3.752922069907301*^9, 3.752922282146762*^9}, {
+   3.752922439994676*^9, 
+   3.752922446616523*^9}},ExpressionUUID->"cfb7d7e0-a0fb-4568-a26e-\
+265d7e8f0bba"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Write a command that produces such a matrix and that takes ",
+ Cell[BoxData[
+  FormBox["n", TraditionalForm]],ExpressionUUID->
+  "c4ac37fe-d0b1-41a6-b5c8-ddc4311f6e41"],
+ " as an argument, calculate such networks for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "=", "10"}], TraditionalForm]],ExpressionUUID->
+  "99814d85-f1d0-45ef-8d52-31f66b3d729d"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"m", "=", "2"}], ",", " ", 
+    RowBox[{"3", " ", "and", " ", "4"}]}], TraditionalForm]],ExpressionUUID->
+  "99715dba-0ba7-4ce9-a767-267c23d0ebf1"],
+ " and produce a graph of these networks."
+}], "Text",
+ CellChangeTimes->{{3.752922295547901*^9, 
+  3.7529224240322704`*^9}},ExpressionUUID->"c4aebc35-aafc-4f6d-98d2-\
+816fd7f09966"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["b: Axioms, raw-data and all that", "Subsection",
+ CellChangeTimes->{{3.748247451503086*^9, 3.74824745944469*^9}, {
+  3.7528355642137194`*^9, 3.7528355706665564`*^9}, {3.752928322653412*^9, 
+  3.752928331821127*^9}},ExpressionUUID->"44ae1cf0-5f5b-407b-b7b7-\
+ea62bd9de283"],
+
+Cell[TextData[{
+ StyleBox["Question: ",
+  FontWeight->"Bold"],
+ "Use the command from",
+ StyleBox[" a:",
+  FontWeight->"Bold"],
+ " to calculate such networks for ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"n", "=", "250"}], TraditionalForm]],ExpressionUUID->
+  "f7900ab1-f57d-4232-b358-5217a2edccfb"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"m", "=", " ", 
+    RowBox[{"3", " ", "and", " ", "4"}]}], TraditionalForm]],ExpressionUUID->
+  "8de9f835-9bf6-4a7f-853f-7c96690de021"],
+ " and produce histograms for the distribution of in-degrees and out-degrees \
+in these networks. "
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+   3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.752924473644802*^9, 
+   3.7529245722155104`*^9}, 3.753474197702593*^9, {3.7534742304982967`*^9, 
+   3.7534742304982967`*^9}},ExpressionUUID->"6d15e1b1-ab26-49ab-9ed3-\
+f5bb1b6b5f53"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Can you give an example of knowledge elements in a Science or any other \
+research discipline whose in-degree you would expect to be 0? "
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+   3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.752924473644802*^9, 
+   3.7529245722155104`*^9}, 3.753474197702593*^9, {3.7534742322692614`*^9, 
+   3.7534742494813013`*^9}},ExpressionUUID->"fc8d2c92-adfa-4069-ab4b-\
+683085a0708a"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Can you give an example of a knowledge element in a Science or any other \
+research discipline whose out-degree you would expect to be 0?"
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+   3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.752924473644802*^9, 
+   3.7529245722155104`*^9}, 3.753474197702593*^9, {3.7534742322692614`*^9, 
+   3.7534742548374743`*^9}},ExpressionUUID->"324fecdd-70ad-4199-b785-\
+bb6b2805c3dc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["c: What you value and what you hold", "Subsection",
+ CellChangeTimes->{{3.748247451503086*^9, 3.748247464032208*^9}, {
+  3.752835573815549*^9, 3.752835583260968*^9}, {3.7529283389341507`*^9, 
+  3.75292834465985*^9}},ExpressionUUID->"e6742077-6441-4de0-ba83-\
+3ee67dda58ce"],
+
+Cell[TextData[{
+ "A researcher has a portfolio of research puzzles ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["h", "\[RightVector]"], TraditionalForm]],ExpressionUUID->
+  "86ea71a5-9440-4097-9278-a756aee432f8"],
+ " and assigns a relative relevance ",
+ Cell[BoxData[
+  FormBox[
+   OverscriptBox["r", "\[RightVector]"], TraditionalForm]],ExpressionUUID->
+  "5403d681-51b2-4618-b7d2-866f3be00230"],
+ " to these puzzles. "
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+  3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.7529237935845604`*^9, 
+  3.7529238567353144`*^9}, {3.752924585454088*^9, 3.752924678770326*^9}, {
+  3.7529282970426226`*^9, 3.75292830120106*^9}, {3.7534742674953775`*^9, 
+  3.7534742769866776`*^9}},ExpressionUUID->"77d1f499-fb3e-42e5-9ab5-\
+6e4a5e5d98f6"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " State the optimisation problem that the researcher faces in assigning \
+relevance and making a portfolio choice. "
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+  3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.7529237935845604`*^9, 
+  3.7529238567353144`*^9}, {3.752924585454088*^9, 3.752924678770326*^9}, {
+  3.7529282970426226`*^9, 3.75292830120106*^9}, {3.7534742716632977`*^9, 
+  3.753474292529677*^9}},ExpressionUUID->"d6ec444e-6788-4743-b2cd-\
+77c21ce77109"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Calculate the optimal portfolio and relevance allocation for the two \
+networks you have generated under ",
+ StyleBox["b:",
+  FontWeight->"Bold"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+  3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.7529237935845604`*^9, 
+  3.7529238567353144`*^9}, {3.752924585454088*^9, 3.752924678770326*^9}, {
+  3.7529282970426226`*^9, 3.75292830120106*^9}, {3.7534742716632977`*^9, 
+  3.753474305696136*^9}},ExpressionUUID->"aa69de2b-762e-4bf1-a8cb-\
+c1bbaa73e495"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Produce a histogram of the relevance and of the portfolio holdings and \
+discus you interpretations."
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+  3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.7529237935845604`*^9, 
+  3.7529238567353144`*^9}, {3.752924585454088*^9, 3.752924678770326*^9}, {
+  3.7529282970426226`*^9, 3.75292830120106*^9}, {3.7534742716632977`*^9, 
+  3.7534743108498096`*^9}},ExpressionUUID->"aeb4c0e6-f4a2-4ecc-8d80-\
+2286a0c230c4"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["d: A research community in equilibrium", "Subsection",
+ CellChangeTimes->{{3.748247451503086*^9, 3.7482474520178995`*^9}, 
+   3.7528204750485487`*^9, {3.752835589379691*^9, 3.7528355957161655`*^9}, {
+   3.752928355056628*^9, 
+   3.752928359553789*^9}},ExpressionUUID->"a04a8ab3-a93c-47ba-9c78-\
+00f4cda40dc7"],
+
+Cell[TextData[{
+ "Suppose we have a collection of ",
+ Cell[BoxData[
+  FormBox["N", TraditionalForm]],ExpressionUUID->
+  "b5d51203-8291-4a6e-bbba-e0cb6b2319a7"],
+ " researchers like the one in ",
+ StyleBox["c:",
+  FontWeight->"Bold"],
+ " who interact with one another through random interactions during which \
+they exchange information, data, research resources. Suppose the relevant \
+utility function for these agents, that describes the utility of the expected \
+priority-reward ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["r", "j"], TraditionalForm]],ExpressionUUID->
+  "985df4c2-34cc-480a-a93e-0a22eb1c9dfa"],
+ " of puzzle ",
+ Cell[BoxData[
+  FormBox["j", TraditionalForm]],ExpressionUUID->
+  "512bf23d-b599-469c-8815-2a0a1bd50b89"],
+ ", is given by ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"u", "[", "r", "]"}], "=", 
+    SqrtBox["r"]}], TraditionalForm]],ExpressionUUID->
+  "6ef8d2c6-587e-443d-8dd4-7432a3f35f67"],
+ ". "
+}], "Text",
+ CellChangeTimes->{{3.7482477102982593`*^9, 3.7482477777691245`*^9}, 
+   3.748248051980051*^9, {3.7528339537136807`*^9, 3.7528339702179174`*^9}, {
+   3.7529251987826*^9, 
+   3.7529253644782534`*^9}},ExpressionUUID->"a4e5c5ba-4ec8-42e1-a0ee-\
+c2f9085513e4"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Describe how we can view these agents as being in a statistical choice \
+equilibrium. "
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+  3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.7529237935845604`*^9, 
+  3.7529238567353144`*^9}, {3.752924585454088*^9, 3.752924678770326*^9}, {
+  3.7529253812025557`*^9, 3.752925404820636*^9}, {3.75292551226943*^9, 
+  3.752925643234905*^9}, {3.753474445746676*^9, 
+  3.753474445746676*^9}},ExpressionUUID->"9e459bc1-4481-428c-9611-\
+b09aa51699d4"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Compute the partition function, the Helmholtz utility of this statistical \
+equilibrium and plot a few of the choice-probabilities as a function of ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"T", "=", 
+    SuperscriptBox["\[Beta]", 
+     RowBox[{"-", "1"}]]}], TraditionalForm]],ExpressionUUID->
+  "6abf26e6-d478-40a1-ba10-74280c24807f"],
+ ", including the one(s) that survive(s) in the ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"T", "\[RightArrow]", 
+    RowBox[{"0", "\[Infinity]"}]}], TraditionalForm]],ExpressionUUID->
+  "7141aec1-ad85-49f4-9b18-d91f449f2e63"],
+ " limit. Explain your results."
+}], "Text",
+ CellChangeTimes->{{3.752833867342142*^9, 3.7528339022935686`*^9}, {
+  3.7529236772328415`*^9, 3.7529237508258047`*^9}, {3.7529237935845604`*^9, 
+  3.7529238567353144`*^9}, {3.752924585454088*^9, 3.752924678770326*^9}, {
+  3.7529253812025557`*^9, 3.752925404820636*^9}, {3.75292551226943*^9, 
+  3.752925643234905*^9}, {3.7534744515404096`*^9, 3.7534744519875755`*^9}, {
+  3.753474803434497*^9, 
+  3.7534748149024816`*^9}},ExpressionUUID->"5026608e-7bee-4ec1-b554-\
+cf8715f7e230"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["e: Paradigms", "Subsection",
+ CellChangeTimes->{{3.748247451503086*^9, 3.7482474520178995`*^9}, 
+   3.7528204786271563`*^9, {3.752835549681037*^9, 
+   3.752835551155449*^9}},ExpressionUUID->"06340d4f-3c65-453c-be2d-\
+f533a450ebdc"],
+
+Cell[TextData[{
+ "Consider the two networks you have calculated under ",
+ StyleBox["b:",
+  FontWeight->"Bold"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.752928256101297*^9, 
+  3.7529282578075647`*^9}},ExpressionUUID->"fd859dbd-b7f3-48a9-8ba5-\
+611fda100d4e"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ "  Give an argument why the direct outcome of a research process might be a \
+directed network whereas the actual underlying knowledge network might \
+nevertheless be a symmetric network? "
+}], "Text",
+ CellChangeTimes->{{3.7529259132571735`*^9, 3.752926082674718*^9}, 
+   3.7529282500980177`*^9, {3.7529288430256443`*^9, 3.752928844344679*^9}, {
+   3.7534744609710703`*^9, 
+   3.7534744609710703`*^9}},ExpressionUUID->"7b68953f-c85a-466a-9886-\
+93a6d2e95dc7"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Form the adjacency matrices of the symmetric networks, compute the \
+possible paradigms that the networks support and, for each of the networks, \
+produce graphs that visually identify the differences between the first and \
+second paradigm. "
+}], "Text",
+ CellChangeTimes->{{3.7529259132571735`*^9, 3.752926082674718*^9}, 
+   3.7529282500980177`*^9, {3.7529288430256443`*^9, 3.752928844344679*^9}, {
+   3.7534744648230705`*^9, 
+   3.753474473158843*^9}},ExpressionUUID->"4390cde8-6330-4e18-87d3-\
+5aab53853f16"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Explain why, in the case of paradigm 1, for researcher ",
+ Cell[BoxData[
+  FormBox["J", TraditionalForm]],ExpressionUUID->
+  "fffe0062-1232-446f-94df-b4aff704496b"],
+ " the number ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "J"], "=", 
+    RowBox[{"0", " ", "or", " ", "1"}]}], TraditionalForm]],ExpressionUUID->
+  "522cb3ba-572e-4108-a029-370236921964"],
+ " depending on whether she has chosen an optimal portfolio ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    OverscriptBox["h", "\[RightVector]"], "J"], TraditionalForm]],
+  ExpressionUUID->"8da1dceb-51d4-4663-a418-6bfce1525262"],
+ " that is consistent with the 'true' paradigm (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "J"], "=", "1"}], TraditionalForm]],
+  ExpressionUUID->"73f8c600-8970-4312-8732-bd698ae601ec"],
+ ") or that was consistent with a mistaken paradigm (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "J"], "=", "0"}], TraditionalForm]],
+  ExpressionUUID->"2e13b432-d13d-4848-b043-1a84679d744c"],
+ "). "
+}], "Text",
+ CellChangeTimes->{{3.7529259132571735`*^9, 3.752926082674718*^9}, 
+   3.7529282500980177`*^9, {3.7529288430256443`*^9, 3.752928844344679*^9}, {
+   3.7534744648230705`*^9, 3.753474477765391*^9}, {3.7534749626172276`*^9, 
+   3.7534749626172276`*^9}, {3.753475004831499*^9, 
+   3.7534750096224136`*^9}},ExpressionUUID->"4e17a6f4-ba6a-4da1-b1ec-\
+e25a707b0a3d"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Explain why, in the case of paradigm 2, for researcher ",
+ Cell[BoxData[
+  FormBox["J", TraditionalForm]],ExpressionUUID->
+  "1b5e8ea0-d4f7-4057-864d-5d74b81ef187"],
+ " the number ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "J"], "=", 
+    RowBox[{
+     RowBox[{"-", "1"}], " ", "or", " ", "1"}]}], TraditionalForm]],
+  ExpressionUUID->"3b820587-50bd-4a45-9441-7c55ac99139e"],
+ " depending on whether she has chosen an optimal portfolio ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox[
+    OverscriptBox["h", "\[RightVector]"], "J"], TraditionalForm]],
+  ExpressionUUID->"82b4b0fc-4883-4f9c-a3c6-4040fba2ad4b"],
+ " that is consistent with one version of paradigm 2 (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "J"], "=", "1"}], TraditionalForm]],
+  ExpressionUUID->"b33d58c5-1e49-4974-b17c-fa5e2877b7b0"],
+ ") or that was consistent with the opposing version of paradigm 2 (",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "J"], "=", "1"}], TraditionalForm]],
+  ExpressionUUID->"0ea68f56-dc91-4285-b772-3affcd66908b"],
+ "). "
+}], "Text",
+ CellChangeTimes->{{3.7529259132571735`*^9, 3.752926082674718*^9}, 
+   3.7529282500980177`*^9, {3.7529288430256443`*^9, 3.752928844344679*^9}, {
+   3.7534744648230705`*^9, 3.753474477765391*^9}, {3.753474973281237*^9, 
+   3.7534749887072225`*^9}, {3.753475019737908*^9, 3.7534750198226433`*^9}, {
+   3.753475051674592*^9, 
+   3.753475078131259*^9}},ExpressionUUID->"c711ca0f-03c3-4261-b00a-\
+1339fad5158d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["f: Mean-field paradigm choice", "Subsection",
+ CellChangeTimes->{{3.748247451503086*^9, 3.7482474520178995`*^9}, 
+   3.752820483326369*^9, {3.752927259808547*^9, 3.7529272661761494`*^9}, {
+   3.7529284240507307`*^9, 3.752928426659497*^9}, {3.7529294087677946`*^9, 
+   3.752929412579305*^9}},ExpressionUUID->"2988c5b6-e3b7-4af9-ae2c-\
+fb4e4ca89aef"],
+
+Cell[TextData[{
+ "We will now consider the researchers doubting between the two possible \
+versions of paradigm 2, i.e. with choice variables ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    SubscriptBox["\[Sigma]", "J"], "=", 
+    RowBox[{"\[PlusMinus]", "1"}]}], TraditionalForm]],ExpressionUUID->
+  "ef5d10db-b8af-49f1-8039-18c16b161f7d"],
+ ". Suppose we have a community of 500 researchers. Each of them has a 1/3 \
+probability of being connected to each of the others.  Assume that the \
+preferences of researcher ",
+ Cell[BoxData[
+  FormBox["J", TraditionalForm]],ExpressionUUID->
+  "7bfcbfa5-3acf-4a9b-b826-dc616c5c96cc"],
+ " concerning this choice are given by"
+}], "Text",
+ CellChangeTimes->{{3.7482477102982593`*^9, 3.7482477777691245`*^9}, 
+   3.748248051980051*^9, {3.752928436103505*^9, 3.7529285905087476`*^9}, 
+   3.752928996721283*^9, {3.7529290325561533`*^9, 3.752929041300703*^9}, 
+   3.753475654853074*^9, {3.7534768976990757`*^9, 
+   3.7534769002568417`*^9}},ExpressionUUID->"b7de69d3-d8a0-47ff-b6cc-\
+7657aa77771e"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SubscriptBox["u", "J"], "(", 
+     SubscriptBox["\[Sigma]", "J"], ")"}], " ", "=", " ", 
+    RowBox[{
+     RowBox[{"E", " ", 
+      SubscriptBox["\[Sigma]", "J"]}], "+", 
+     RowBox[{
+      UnderoverscriptBox["\[Sum]", 
+       RowBox[{"M", "=", "1"}], "N"], 
+      RowBox[{
+       SubscriptBox["C", "JM"], 
+       SubscriptBox["\[Sigma]", "J"], 
+       SubscriptBox["\[Sigma]", "M"]}]}]}]}], "  ", ","}], 
+  TraditionalForm]], "Equation",
+ CellChangeTimes->{{3.752929007957882*^9, 3.7529290968223963`*^9}, {
+  3.7529291728586807`*^9, 
+  3.7529291752966976`*^9}},ExpressionUUID->"9b63073d-08c8-447b-bb19-\
+820be6346126"],
+
+Cell[TextData[{
+ "where ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["C", "JM"], TraditionalForm]],ExpressionUUID->
+  "05504072-8e95-4a1d-9162-fbe897eb1e4f"],
+ " are the matrix-elements of the adjacency matrix of the community-network \
+among the researchers and ",
+ Cell[BoxData[
+  FormBox["E", TraditionalForm]],ExpressionUUID->
+  "23c4e661-0fd8-440d-bfbd-1fbec2224f47"],
+ " is the evidence available to each researcher."
+}], "Text",
+ CellChangeTimes->{{3.752929098481759*^9, 3.752929117486067*^9}, {
+  3.7529291824010983`*^9, 
+  3.7529292054246264`*^9}},ExpressionUUID->"bf72fdc3-68d2-4389-ad73-\
+0df77f44e046"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Generate a random network among these 500 researchers, without self-loops, \
+where the weights are either 1 or 0 according to the above description, call \
+its adjacency matrix C1, also generate the symmetrized version of it and call \
+its adjacency matrix CS. "
+}], "Text",
+ CellChangeTimes->{{3.7482477102982593`*^9, 3.7482477777691245`*^9}, 
+   3.748248051980051*^9, {3.752928436103505*^9, 3.7529286127792225`*^9}, {
+   3.752928666914317*^9, 3.7529288656978755`*^9}, {3.7529289374402523`*^9, 
+   3.7529289450452995`*^9}, {3.7529289786833715`*^9, 3.752928993880376*^9}, {
+   3.7529292614153824`*^9, 3.752929288603773*^9}, {3.7529293377224827`*^9, 
+   3.7529294684789796`*^9}, {3.7529295972218695`*^9, 
+   3.7529296139256353`*^9}, {3.753474558050952*^9, 3.753474558050952*^9}, {
+   3.7534757799107647`*^9, 
+   3.7534757839184713`*^9}},ExpressionUUID->"d314584a-a0ea-42fa-b4fd-\
+35a24fbc3d57"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Use ",
+ StyleBox["mean field theory",
+  FontSlant->"Italic"],
+ " and the mean out-degree of the researcher-network to analyse whether the \
+two communities can agree on a consistent choice of ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Sigma]", "J"], TraditionalForm]],ExpressionUUID->
+  "4b4d45ed-6f13-4a06-97b0-311bced44bc3"],
+ " ."
+}], "Text",
+ CellChangeTimes->{{3.7482477102982593`*^9, 3.7482477777691245`*^9}, 
+   3.748248051980051*^9, {3.752928436103505*^9, 3.7529286127792225`*^9}, {
+   3.752928666914317*^9, 3.7529288656978755`*^9}, {3.7529289374402523`*^9, 
+   3.7529289450452995`*^9}, {3.7529289786833715`*^9, 3.752928993880376*^9}, {
+   3.7529292614153824`*^9, 3.752929288603773*^9}, {3.7529293377224827`*^9, 
+   3.7529294684789796`*^9}, {3.7529295972218695`*^9, 
+   3.7529296139256353`*^9}, {3.7534745611085525`*^9, 
+   3.7534745625587425`*^9}, {3.753475936307661*^9, 
+   3.753475978035412*^9}},ExpressionUUID->"0ee36b71-5587-4462-9953-\
+6d83238c8b11"],
+
+Cell[TextData[{
+ StyleBox["Question:",
+  FontWeight->"Bold"],
+ " Calculate the variance of the out-degree in your random network and \
+discuss, perhaps using mean-field theory, what the effect of this is on the \
+critical value of ",
+ Cell[BoxData[
+  FormBox["T", TraditionalForm]],
+  FormatType->"TraditionalForm",ExpressionUUID->
+  "90e6f376-6086-4ad5-996b-687daa8d21bd"],
+ " below which consensus formation starts to occur."
+}], "Text",
+ CellChangeTimes->{{3.7482477102982593`*^9, 3.7482477777691245`*^9}, 
+   3.748248051980051*^9, {3.752928436103505*^9, 3.7529286127792225`*^9}, {
+   3.752928666914317*^9, 3.7529288656978755`*^9}, {3.7529289374402523`*^9, 
+   3.7529289450452995`*^9}, {3.7529289786833715`*^9, 3.752928993880376*^9}, {
+   3.7529292614153824`*^9, 3.752929288603773*^9}, {3.7529293377224827`*^9, 
+   3.7529294684789796`*^9}, {3.7529295972218695`*^9, 
+   3.7529296139256353`*^9}, {3.7534745611085525`*^9, 
+   3.7534745625587425`*^9}, {3.753475936307661*^9, 
+   3.753476093748269*^9}},ExpressionUUID->"bf585698-d749-4e3e-b0c3-\
+ae296e581f15"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{814, 805},
+WindowMargins->{{19, Automatic}, {Automatic, 42}},
+FrontEndVersion->"11.2 for Microsoft Windows (64-bit) (September 10, 2017)",
+StyleDefinitions->FrontEnd`FileName[{"Article"}, "JournalArticle.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 290, 5, 76, "Title",ExpressionUUID->"286ca117-9ff3-45ca-aeaf-fa39a5d8fb12"],
+Cell[873, 29, 360, 6, 28, "Subtitle",ExpressionUUID->"1a369539-eed4-4a67-9b68-d9f94214f390"],
+Cell[1236, 37, 246, 4, 42, "Author",ExpressionUUID->"0a14a6ba-4a36-470e-8913-79547ee28377"],
+Cell[1485, 43, 244, 4, 22, "Author",ExpressionUUID->"38e7bdfe-e0b0-4da1-b106-6b874f09f4c1"],
+Cell[CellGroupData[{
+Cell[1754, 51, 215, 4, 27, "AbstractSection",ExpressionUUID->"74117d6f-d342-4ce9-b8c8-2ebfc5d9322c"],
+Cell[1972, 57, 1100, 24, 39, "Abstract",ExpressionUUID->"b87d91f7-4c41-4890-a43e-091aa9f7f21a"],
+Cell[3075, 83, 837, 16, 39, "Abstract",ExpressionUUID->"5d837c7f-2172-479a-a608-999dc41a9f27"],
+Cell[3915, 101, 605, 9, 22, "Abstract",ExpressionUUID->"5de8ad3d-8d8f-4ed2-9c01-d6aeb3293161"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4557, 115, 257, 4, 50, "Section",ExpressionUUID->"e490e541-ceaf-42f8-9837-76d3e3435b38"],
+Cell[CellGroupData[{
+Cell[4839, 123, 225, 4, 34, "Subsection",ExpressionUUID->"e0e7cb38-0fd3-4c9c-8edc-fb639c7ad218"],
+Cell[5067, 129, 1319, 25, 77, "Text",ExpressionUUID->"cfb7d7e0-a0fb-4568-a26e-265d7e8f0bba"],
+Cell[6389, 156, 809, 23, 41, "Text",ExpressionUUID->"c4aebc35-aafc-4f6d-98d2-816fd7f09966"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7235, 184, 278, 4, 34, "Subsection",ExpressionUUID->"44ae1cf0-5f5b-407b-b7b7-ea62bd9de283"],
+Cell[7516, 190, 901, 24, 41, "Text",ExpressionUUID->"6d15e1b1-ab26-49ab-9ed3-f5bb1b6b5f53"],
+Cell[8420, 216, 521, 10, 23, "Text",ExpressionUUID->"fc8d2c92-adfa-4069-ab4b-683085a0708a"],
+Cell[8944, 228, 522, 10, 23, "Text",ExpressionUUID->"324fecdd-70ad-4199-b785-bb6b2805c3dc"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9503, 243, 279, 4, 34, "Subsection",ExpressionUUID->"e6742077-6441-4de0-ba83-3ee67dda58ce"],
+Cell[9785, 249, 813, 18, 27, "Text",ExpressionUUID->"77d1f499-fb3e-42e5-9ab5-6e4a5e5d98f6"],
+Cell[10601, 269, 569, 11, 23, "Text",ExpressionUUID->"d6ec444e-6788-4743-b2cd-77c21ce77109"],
+Cell[11173, 282, 607, 14, 23, "Text",ExpressionUUID->"aa69de2b-762e-4bf1-a8cb-c1bbaa73e495"],
+Cell[11783, 298, 558, 11, 23, "Text",ExpressionUUID->"aeb4c0e6-f4a2-4ecc-8d80-2286a0c230c4"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12378, 314, 315, 5, 34, "Subsection",ExpressionUUID->"a04a8ab3-a93c-47ba-9c78-00f4cda40dc7"],
+Cell[12696, 321, 1209, 33, 70, "Text",ExpressionUUID->"a4e5c5ba-4ec8-42e1-a0ee-c2f9085513e4"],
+Cell[13908, 356, 589, 12, 23, "Text",ExpressionUUID->"9e459bc1-4481-428c-9611-b09aa51699d4"],
+Cell[14500, 370, 1150, 26, 41, "Text",ExpressionUUID->"5026608e-7bee-4ec1-b554-cf8715f7e230"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15687, 401, 237, 4, 34, "Subsection",ExpressionUUID->"06340d4f-3c65-453c-be2d-f533a450ebdc"],
+Cell[15927, 407, 256, 8, 23, "Text",ExpressionUUID->"fd859dbd-b7f3-48a9-8ba5-611fda100d4e"],
+Cell[16186, 417, 523, 11, 41, "Text",ExpressionUUID->"7b68953f-c85a-466a-9886-93a6d2e95dc7"],
+Cell[16712, 430, 577, 12, 41, "Text",ExpressionUUID->"4390cde8-6330-4e18-87d3-5aab53853f16"],
+Cell[17292, 444, 1489, 39, 49, "Text",ExpressionUUID->"4e17a6f4-ba6a-4da1-b1ec-e25a707b0a3d"],
+Cell[18784, 485, 1579, 41, 45, "Text",ExpressionUUID->"c711ca0f-03c3-4261-b00a-1339fad5158d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20400, 531, 354, 5, 34, "Subsection",ExpressionUUID->"2988c5b6-e3b7-4af9-ae2c-fb4e4ca89aef"],
+Cell[20757, 538, 1032, 22, 59, "Text",ExpressionUUID->"b7de69d3-d8a0-47ff-b6cc-7657aa77771e"],
+Cell[21792, 562, 685, 21, 56, "Equation",ExpressionUUID->"9b63073d-08c8-447b-bb19-820be6346126"],
+Cell[22480, 585, 614, 16, 41, "Text",ExpressionUUID->"bf72fdc3-68d2-4389-ad73-0df77f44e046"],
+Cell[23097, 603, 958, 17, 41, "Text",ExpressionUUID->"d314584a-a0ea-42fa-b4fd-35a24fbc3d57"],
+Cell[24058, 622, 1034, 23, 41, "Text",ExpressionUUID->"0ee36b71-5587-4462-9953-6d83238c8b11"],
+Cell[25095, 647, 1058, 21, 41, "Text",ExpressionUUID->"bf585698-d749-4e3e-b0c3-ae296e581f15"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
